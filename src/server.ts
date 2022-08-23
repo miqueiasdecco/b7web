@@ -6,6 +6,7 @@ import mainRouters from './routes/index';
 
 dotenv.config();
 
+
 const server = express();
 
 server.set('view engine', 'mustache');
@@ -21,6 +22,4 @@ server.use((req, res)=>{
     res.send('página não encontrada!')
 })
 
-server.listen(process.env.PORT,() => {
-    console.log(`Example app listening on port ${process.env.PORT}`)
-  });
+server.listen(process.env.PORT);
